@@ -98,15 +98,16 @@
 
 
 		<!-- Inscription -->
+<!-- Inscription -->
 <section class="contact-us section">
     <div class="container">
         <div class="inner">
             <div class="row">
                 <div class="contact-us-form">
                     <h2>INSCRIPTION</h2>
-                    <p>Veuillez remplir les informations ci-dessous pour vous inscrire.</p>
+                    <p>Pour toutes questions n'hésitez pas à nous contacter</p>
                     <!-- Form -->
-                    <form class="form" method="post" action="mail/PatientInscription.php">
+                    <form class="form" method="post" action="inscription.php" onsubmit="return validatePassword();">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -130,17 +131,19 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password" name="password" placeholder="Mot de Passe" required="">
+                                    <input type="password" name="password" id="password" placeholder="Mot de passe" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$">
+                                    <i class="fa fa-eye" id="eyeIcon" onclick="togglePasswordVisibility();"></i>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password" name="confirm_password" placeholder="Confirmer le Mot de Passe" required="">
+                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" required="">
+                                    <i class="fa fa-eye" id="eyeIconConfirm" onclick="togglePasswordVisibility('confirm');"></i>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group login-btn">
-                                    <button class="btn" type="submit">S'inscrire</button>
+                                    <button class="btn" type="submit">Inscription</button>
                                 </div>
                                 <div class="checkbox">
                                     <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Souhaitez-vous vous abonner à notre newsletter ?</label>
@@ -154,6 +157,45 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Fonction pour basculer l'affichage du mot de passe
+    function togglePasswordVisibility(type = 'password') {
+        var passwordField = (type === 'confirm') ? document.getElementById("confirm_password") : document.getElementById("password");
+        var icon = (type === 'confirm') ? document.getElementById("eyeIconConfirm") : document.getElementById("eyeIcon");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            icon.style.color = "blue"; // Changer la couleur de l'icône pour indiquer qu'il est visible
+        } else {
+            passwordField.type = "password";
+            icon.style.color = "black"; // Retour à la couleur initiale
+        }
+    }
+
+    // Fonction de validation des mots de passe
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+
+        // Validation si les mots de passe ne correspondent pas
+        if (password !== confirmPassword) {
+            alert("Les mots de passe ne correspondent pas.");
+            return false;
+        }
+
+        // Validation de la complexité du mot de passe
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/;
+        if (!password.match(passwordPattern)) {
+            alert("Le mot de passe doit contenir au moins 12 caractères, avec des lettres majuscules, des lettres minuscules, des chiffres et des caractères spéciaux.");
+            return false;
+        }
+
+        return true; // Si tout est valide, on soumet le formulaire
+    }
+</script>
+
+
 <!-- End Inscription -->
 
 		<!--/ End Inscription -->

@@ -26,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Tous les champs doivent être remplis.";
     } elseif ($password !== $confirm_password) {
         echo "Les mots de passe ne correspondent pas.";
+    } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/', $password)) {
+        echo "Le mot de passe doit contenir au moins 12 caractères, avec des lettres majuscules, des lettres minuscules, des chiffres et des caractères spéciaux.";
     } else {
         // Hashage du mot de passe
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
