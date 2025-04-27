@@ -97,67 +97,88 @@
 		<!-- End Header Area -->
 
 
-		<!-- Inscription -->
-<!-- Inscription -->
-<section class="contact-us section">
-    <div class="container">
-        <div class="inner">
-            <div class="row">
-                <div class="contact-us-form">
-                    <h2>INSCRIPTION</h2>
-                    <p>Pour toutes questions n'hésitez pas à nous contacter</p>
-                    <!-- Form -->
-                    <form class="form" method="post" action="inscription.php" onsubmit="return validatePassword();">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="text" name="name" placeholder="Nom" required="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="text" name="firstname" placeholder="Prénom" required="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email" required="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="text" name="phone" placeholder="Téléphone" required="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" placeholder="Mot de passe" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$">
-                                    <i class="fa fa-eye" id="eyeIcon" onclick="togglePasswordVisibility();"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" required="">
-                                    <i class="fa fa-eye" id="eyeIconConfirm" onclick="togglePasswordVisibility('confirm');"></i>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group login-btn">
-                                    <button class="btn" type="submit">Inscription</button>
-                                </div>
-								<a href="PatientConnexion.html" style="color: #007bff; text-decoration: underline; display: inline-block; margin-top: 10px;">
-									Vous avez déjà un compte ?
-								</a>
-                            </div>
-                        </div>
-                    </form>
-                    <!--/ End Form -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+		<!-- Patient Connexion -->
+		<section class="contact-us section">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+							<div class="contact-us-form">
+								<h2>CONNEXION</h2>
+								<p>Pour toutes questions n'hésitez pas à nous contacter</p>
+								<!-- Form -->
+								<form class="form" method="post" action="mail/mail.php">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" name="email" placeholder="Email" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+                                			<div class="form-group">
+                                    			<input type="password" name="password" id="password" placeholder="Mot de passe" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$">
+                                    			<i class="fa fa-eye" id="eyeIcon" onclick="togglePasswordVisibility();"></i>
+                                			</div>
+											<div class="form-group">
+												<a href="ForgotMDP.html" style="color: #007bff; text-decoration: underline; display: inline-block; margin-top: 10px;">
+        											Mot de passe oublié ?
+    											</a>
+											</div>
+                            			</div>
+										<div class="col-12">
+											<div class="form-group login-btn">
+												<button class="btn" type="submit">Connexion</button>
+											</div>
+    										<a href="AdministrateurInscription.html" style="color: #007bff; text-decoration: underline; display: inline-block; margin-top: 10px;">
+												Vous n'avez pas de compte ?
+    										</a>
+										</div>
+									</div>
+								</form>
+								<!--/ End Form -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contact-info">
+					<div class="row">
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont icofont-ui-call"></i>
+								<div class="content">
+									<h3>+(000) 1234 56789</h3>
+									<p>info@company.com</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont-google-map"></i>
+								<div class="content">
+									<h3>2 Fir e Brigade Road</h3>
+									<p>Chittagonj, Lakshmipur</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont icofont-wall-clock"></i>
+								<div class="content">
+									<h3>Mon - Sat: 8am - 5pm</h3>
+									<p>Sunday Closed</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Connexion -->
 <script>
     // Fonction pour basculer l'affichage du mot de passe
     function togglePasswordVisibility(type = 'password') {
@@ -172,33 +193,7 @@
             icon.style.color = "black"; // Retour à la couleur initiale
         }
     }
-
-    // Fonction de validation des mots de passe
-    function validatePassword() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirm_password").value;
-
-        // Validation si les mots de passe ne correspondent pas
-        if (password !== confirmPassword) {
-            alert("Les mots de passe ne correspondent pas.");
-            return false;
-        }
-
-        // Validation de la complexité du mot de passe
-        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/;
-        if (!password.match(passwordPattern)) {
-            alert("Le mot de passe doit contenir au moins 12 caractères, avec des lettres majuscules, des lettres minuscules, des chiffres et des caractères spéciaux.");
-            return false;
-        }
-
-        return true; // Si tout est valide, on soumet le formulaire
-    }
 </script>
-
-
-<!-- End Inscription -->
-
-		<!--/ End Inscription -->
 
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -261,7 +256,7 @@
 							<div class="single-footer">
 								<h2>Newsletter</h2>
 								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="mail/PatientInscription.php" method="get" target="_blank" class="newsletter-inner">
+								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
 									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Your email address'" required="" type="email">
 									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
