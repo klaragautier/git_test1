@@ -46,11 +46,12 @@
 		<ul class="pro-features">
 			<a class="get-pro" href="#">Onglets</a>
 			<div class="button">
-				<a href="PatientAcceuil.html" class="btn">Acceuil</a>
-				<a href="PatientAcceuil.html" class="btn">Calendrier</a>
-				<a href="PatientAcceuil.html" class="btn">Messagerie</a>
-                <a href="PatientAcceuil.html" class="btn">Profil</a>
-                <a href="PatientAcceuil.html" class="btn">Paramètres</a>
+				<a href="KineAcceuil.html" class="btn">Acceuil</a>
+				<a href="KineAcceuil.html" class="btn">Calendrier</a>
+				<a href="KineAcceuil.html" class="btn">Messagerie</a>
+                <a href="ListePatients" class="btn">Patients</a>
+                <a href="KineAcceuil.html" class="btn">Profil</a>
+                <a href="KineAcceuil.html" class="btn">Paramètres</a>
                 <a href="index.html" class="btn">Déconnexion</a>
 			</div>
 		</ul>
@@ -74,6 +75,9 @@
             </div>
         </div>
         <!-- End Preloader -->
+
+
+        
 
 
 		<!-- Header Area -->
@@ -110,46 +114,41 @@
 		</header>
 		<!-- End Header Area -->
 
-<!-- Administrateur Connexion -->
-        <section class="error-page section">
-			<div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 col-12">
-                            <div class="error-inner">
-                                <h1><span>Bonjour!</span></h1>
-                                <p>Vous cherchez un patient?</p>
-                                <form class="search-form">
-                                    <input placeholder="Search from Here" type="text">
-                                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
+
+<!-- SECTION : Liste des Patients -->
+<section class="contact-us section" id="liste-patients">
+	<div class="container">
+		<h2 class="mb-4">Mes patients</h2>
+		<div class="row">
+
+			<!-- Patient 1 -->
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="card p-3 shadow-sm mb-4">
+					<h4>Jules Martin</h4>
+					<p><strong>Localisation :</strong> Paris</p>
+					<p><strong>Problèmes :</strong> Douleurs lombaires</p>
+					<p><strong>Dernière séance :</strong> 08/05/2025</p>
+					<a href="#" class="btn btn-sm btn-outline-primary">Voir dossier</a>
+				</div>
 			</div>
-		</section>
-        <section class="contact-us section">
-			<div class="container">
-                <div class="inner">
-					<div class="row">
-							<div class="contact-us-form">
-								<h2>Bonjour!</h2>
-								<p> </p>
-                                <div class="error-inner">
-                                    <form class="search-form">
-                                        <input placeholder="Cherchez ici" type="text">
-                                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
-							</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
+			<!-- Patient 2 -->
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="card p-3 shadow-sm mb-4">
+					<h4>Sarah Dupont</h4>
+					<p><strong>Localisation :</strong> Lyon</p>
+					<p><strong>Problèmes :</strong> Rééducation post-opératoire genou</p>
+					<p><strong>Dernière séance :</strong> 06/05/2025</p>
+					<a href="#" class="btn btn-sm btn-outline-primary">Voir dossier</a>
+				</div>
+			</div>
 
+			<!-- Ajoute autant de patients que nécessaire ici -->
+
+		</div>
+	</div>
+</section>
 
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
