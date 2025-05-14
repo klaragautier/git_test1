@@ -4275,8 +4275,65 @@ body{
 }
 
 
+/*=========================
+	End Calendar CSS
+===========================*/
+
+/*=========================
+	Start Formulaire Patient CSS
+===========================*/
+
+form#patient-form {
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form#patient-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+form#patient-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+form#patient-form input,
+form#patient-form select,
+form#patient-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+form#patient-form button {
+  margin-top: 2rem;
+  padding: 0.8rem;
+  width: 100%;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form#patient-form button:hover {
+  background: #0056b3;
+}
 
 
 /*=========================
-	End Calendar CSS
+	End Formulaire Patient CSS
 ===========================*/
