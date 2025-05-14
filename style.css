@@ -4170,3 +4170,113 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+/*=========================
+	Start Calendar CSS
+===========================*/
+#calendar-app {
+  width: 100%;
+  max-width: 750px;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.calendar-header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.calendar-header button:hover {
+  background-color: #0056b3;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-cell {
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  position: relative;
+  min-height: 100px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.day-cell:hover {
+  background: #eaf3ff;
+}
+
+.day-cell > div:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+.day-cell .add-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #28a745;
+}
+
+.day-cell .add-btn:hover {
+  color: #1c7c31;
+}
+
+.day-cell .event {
+  margin-top: 28px;
+  background: #d4edda;
+  padding: 5px 8px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  color: #155724;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-cell .event button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.day-cell .event button:hover {
+  color: #a71d2a;
+}
+
+
+
+
+/*=========================
+	End Calendar CSS
+===========================*/
