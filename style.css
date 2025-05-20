@@ -4416,3 +4416,73 @@ body {
 /*=========================
 	End Sidebar CSS
 ===========================*/
+
+
+/*=========================
+	Start Paramètres
+===========================*/
+
+.settings-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.settings-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.settings-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #3cb878;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background-color: #3cb878;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #36a36a;
+}
+
+/*=========================
+	End Paramètres
+===========================*/
