@@ -65,15 +65,15 @@
 					<form method="post">
 						<div class="form-group">
 							<label for="first_name">Prénom</label>
-							<input type="text" class="form-control" id="first_name" placeholder="Votre prénom">
+							<input type="text" class="form-control" id="first_name" value="Klara" readonly>
 						</div>
 						<div class="form-group">
 							<label for="last_name">Nom</label>
-							<input type="text" class="form-control" id="last_name" placeholder="Votre nom">
+							<input type="text" class="form-control" id="last_name" value="Gautier" readonly>
 						</div>
 						<div class="form-group">
 							<label for="email">Adresse email</label>
-							<input type="email" class="form-control" id="email" placeholder="exemple@domaine.com">
+							<input type="email" class="form-control" id="email" value="klara.gautier@gmail.com" readonly>
 						</div>
 						<div class="form-group">
 							<label for="special">Spécialisation</label>
@@ -112,8 +112,10 @@
 							<label for="preferences">Préférences</label>
 							<textarea id="preferences" class="form-control" rows="3" placeholder="Préférences personnelles, remarques, objectifs..."></textarea>
 						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn save-btn">Enregistrer les modifications</button>
+						<!-- Boutons -->
+						<div class="form-actions" style="text-align: center; margin-top: 30px;">
+							<button type="button" class="btn save-btn" onclick="enableEdit()">Modifier</button>
+							<button type="submit" class="btn save-btn" style="display: none;" id="saveBtn">Enregistrer</button>
 						</div>
 					</form>
 				</div>

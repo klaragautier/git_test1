@@ -4374,42 +4374,36 @@ form#patient-form button:hover {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 220px;
+	width: 250px;
 	height: 100%;
-	background-color: #f5f5f5;
+	background-color: #17a589;
 	padding-top: 30px;
 	box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 	z-index: 999;
 }
 
-.sidebar-title {
-	text-align: center;
-	font-weight: bold;
-	margin-bottom: 20px;
-	color: #3cb878;
-}
-
 .sidebar a {
+	background-color: #17a589;
 	display: block;
 	padding: 12px 20px;
 	text-decoration: none;
-	color: #333;
+	color: #ffff;
 	font-weight: 500;
 	border-bottom: 1px solid #ddd;
 	transition: background-color 0.2s;
 }
 
 .sidebar a:hover {
-	background-color: #e0f7ea;
+	background-color: #17a589;
 }
 
 .sidebar .logout {
-	color: #c0392b;
+	color: #C00000;
 }
 
 /* Décalage du contenu principal à droite de la sidebar */
 body {
-	margin-left: 220px; /* même largeur que .sidebar */
+	margin-left: 250px; /* même largeur que .sidebar */
 }
 
 
