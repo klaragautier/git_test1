@@ -143,7 +143,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group login-btn">
-                                    <button class="btn" type="submit">Inscription</button>
+                                    <button href="PatientConnexion.html" class="btn" type="submit">Inscription</button>
 									<a href="KineConnexion.html" style="color: #007bff; text-decoration: underline; display: inline-block; margin-top: 10px;">
 										Vous avez déjà un compte ?
 									</a>
@@ -334,5 +334,49 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".form"); // Formulaire de classe "form"
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Empêche l'envoi classique
+
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm_password").value;
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/;
+
+        if (password !== confirmPassword) {
+            alert("Les mots de passe ne correspondent pas.");
+            return;
+        }
+
+        if (!password.match(passwordPattern)) {
+            alert("Le mot de passe doit contenir au moins 12 caractères, avec majuscules, minuscules, chiffres et caractères spéciaux.");
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("/api/kine/register/", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                // ✅ Redirection en cas de succès
+                window.location.href = "KineConnexion.html";
+            } else {
+                const errorText = await response.text();
+                alert("Erreur lors de l'inscription :\n" + errorText);
+            }
+        } catch (error) {
+            console.error("Erreur réseau :", error);
+            alert("Impossible de contacter le serveur.");
+        }
+    });
+});
+</script>
+
     </body>
 </html>
