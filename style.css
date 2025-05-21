@@ -4444,7 +4444,7 @@ select.form-control {
 }
 
 .cookie-banner a {
-  color: #007bff;
+  color: #17a589;
   text-decoration: underline;
 }
 
@@ -4457,7 +4457,7 @@ select.form-control {
 }
 
 #cookie-accept {
-  background-color: #007bff;
+  background-color: #17a589;
   color: #fff;
 }
 
@@ -4495,7 +4495,128 @@ select.form-control {
 	End Cookies
 ===========================*/
 
+/*=========================
+	Start Dashboard
+===========================*/
 
+.dashboard-container {
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+
+/* Colonne gauche */
+.dashboard-left {
+    flex: 2;
+}
+
+/* Colonne droite */
+.dashboard-right {
+    flex: 1;
+}
+
+/* Titre principal */
+.dashboard-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Bannière notification */
+.dashboard-banner p {
+    background-color: #4fcfb8;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* To-do section */
+.todo-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.todo-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.todo-section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo-section li span {
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.todo-section li input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todo-section input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.todo-section button {
+    padding: 8px 16px;
+    background-color: #4fcfb8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.todo-section button:hover {
+    background-color: #3eb2a3;
+}
+
+/* Calendrier */
+.calendar-preview {
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.calendar-preview:hover {
+    transform: scale(1.01);
+    background-color: #f3f3f3;
+}
+
+#calendar-mini {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-top: 10px;
+}
+
+#calendar-mini div {
+    text-align: center;
+    padding: 5px;
+    background-color: #e4f9f6;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+/*==========================
+	End Dashboard
+===========================*/
 
 /*=========================
 	End Paramètres

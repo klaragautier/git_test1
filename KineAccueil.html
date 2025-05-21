@@ -117,28 +117,57 @@
 			<a href="index.html" class="logout">Déconnexion</a>
 		</div>
 
+		<!-- Dashboard principal -->
+		<div class="dashboard-container">
 
+			<!-- Colonne gauche -->
+			<div class="dashboard-left">
 
-<!-- Administrateur Connexion -->
-        <section class="error-page section">
-			<div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 col-12">
-                            <div class="error-inner">
-                                <h1><span>Bonjour!</span></h1>
-                                <p>Vous cherchez un kiné?</p>
-                                <form class="search-form">
-                                    <input placeholder="Search from Here" type="text">
-                                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
+				<!-- Titre d'accueil -->
+				<h1 class="dashboard-title">Bienvenue !</h1>
 
-                        </div>
-                    </div>
-                </div>
+				<!-- Bannière de notification -->
+				<div class="dashboard-banner">
+					<p>Votre prochaine séance est dans 3 jours</p>
+				</div>
+
+				<!-- To-do list -->
+				<div class="todo-section">
+					<h3>Ma To-Do Liste</h3>
+					<ul id="todo-list">
+						<li>
+							<input type="checkbox" onchange="toggleTask(this)">
+							<span>Faire les étirements du dos</span>
+						</li>
+						<li>
+							<input type="checkbox" onchange="toggleTask(this)">
+							<span>Regarder la vidéo sur l'épaule</span>
+						</li>
+												<li>
+							<input type="checkbox" onchange="toggleTask(this)">
+							<span>Trouver un rdv galant pour Klara</span>
+						</li>
+					</ul>
+					<input type="text" id="new-task" placeholder="Nouvelle tâche..." />
+					<button onclick="addTask()">Ajouter</button>
+				</div>
 			</div>
-		</section>
+
+			<!-- Colonne droite (vide pour l'instant) -->
+			<div class="dashboard-right">
+				<!-- Aperçu du calendrier -->
+				<div class="calendar-preview" onclick="window.location.href='KineCalendrier.html'">
+					<h3>Calendrier</h3>
+					<div id="calendar-mini">
+						<!-- Le contenu du mois va être injecté ici -->
+					</div>
+					<p style="font-size: 14px; color: #666;">Cliquez pour voir le calendrier complet</p>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Fin du dashboard principal -->
 
 	<!-- Début de la zone pied de page -->
 	<footer id="footer" class="footer ">
@@ -260,5 +289,68 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+
+		<!-- Custom JS for the To-Do List -->
+		<script>
+		function toggleTask(checkbox) {
+			const span = checkbox.nextElementSibling;
+			if (checkbox.checked) {
+				span.style.textDecoration = 'line-through';
+				span.style.color = 'gray';
+			} else {
+				span.style.textDecoration = 'none';
+				span.style.color = '';
+			}
+		}
+
+		function addTask() {
+			const input = document.getElementById('new-task');
+			const value = input.value.trim();
+			if (value === "") return;
+
+			const li = document.createElement('li');
+			li.innerHTML = `<input type="checkbox" onchange="toggleTask(this)"> <span>${value}</span>`;
+			document.getElementById('todo-list').appendChild(li);
+
+			input.value = "";
+		}
+		</script>
+		<!-- Fin du script JS pour la To-Do List -->
+
+		<!-- code pour le mini calendrier -->
+
+		<script>
+		const calendarMini = document.getElementById("calendar-mini");
+		const now = new Date();
+		const year = now.getFullYear();
+		const month = now.getMonth();
+		const daysInMonth = new Date(year, month + 1, 0).getDate();
+		const firstDay = new Date(year, month, 1).getDay();
+
+		// Affichage des jours de la semaine
+		const days = ["L", "M", "M", "J", "V", "S", "D"];
+		days.forEach(d => {
+			const dayDiv = document.createElement("div");
+			dayDiv.innerText = d;
+			dayDiv.style.fontWeight = "bold";
+			calendarMini.appendChild(dayDiv);
+		});
+
+		// Espaces vides avant le 1er jour
+		const emptyDays = (firstDay + 6) % 7; // pour commencer lundi
+		for (let i = 0; i < emptyDays; i++) {
+			calendarMini.appendChild(document.createElement("div"));
+		}
+
+		// Affichage des jours du mois
+		for (let d = 1; d <= daysInMonth; d++) {
+			const day = document.createElement("div");
+			day.innerText = d;
+			calendarMini.appendChild(day);
+		}
+		</script>
+		<!-- Fin du code pour le mini calendrier -->
+
+
     </body>
 </html>
