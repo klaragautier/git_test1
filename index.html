@@ -61,6 +61,7 @@
         </div>
         <!-- End Preloader -->
 
+
 		<!-- Bande supérieure du site (header) contenant logo, liens principaux et infos de contact -->
 		<header class="header">
 			
@@ -207,6 +208,75 @@
 			</div>
 		</section>
 		<!--/End Start schedule Area -->
+
+
+		<!-- Start Cookies -->
+		<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site.
+    <a href="confidentialite.html" target="_blank">En savoir plus</a>
+  </p>
+  <div class="cookie-buttons">
+    <button id="cookie-accept">Accepter</button>
+    <button id="cookie-settings">Paramétrer</button>
+  </div>
+</div>
+
+
+<div id="cookie-modal" class="cookie-modal">
+  <div class="modal-content">
+    <h3>Préférences de confidentialité</h3>
+    <p>Vous pouvez choisir les types de cookies à activer :</p>
+    <label><input type="checkbox" checked disabled> Cookies nécessaires (toujours actifs)</label><br>
+    <label><input type="checkbox" id="analytics"> Cookies de mesure d’audience</label><br>
+    <label><input type="checkbox" id="marketing"> Cookies marketing</label><br>
+    <div class="modal-actions">
+      <button id="save-settings">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+		<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookie-banner");
+    const modal = document.getElementById("cookie-modal");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const settingsBtn = document.getElementById("cookie-settings");
+    const saveBtn = document.getElementById("save-settings");
+
+    if (!localStorage.getItem("cookiesChoice")) {
+      banner.style.display = "flex";
+    }
+
+    acceptBtn.onclick = () => {
+      localStorage.setItem("cookiesChoice", JSON.stringify({
+        necessary: true,
+        analytics: true,
+        marketing: true
+      }));
+      banner.style.display = "none";
+    };
+
+    settingsBtn.onclick = () => {
+      modal.style.display = "flex";
+    };
+
+    saveBtn.onclick = () => {
+      const analytics = document.getElementById("analytics").checked;
+      const marketing = document.getElementById("marketing").checked;
+
+      localStorage.setItem("cookiesChoice", JSON.stringify({
+        necessary: true,
+        analytics,
+        marketing
+      }));
+
+      modal.style.display = "none";
+      banner.style.display = "none";
+    };
+  });
+</script>
+		<!-- /End Cookies -->
 
 		<!-- Start Feautes -->
 		<section class="Feautes section">
