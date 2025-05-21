@@ -4382,6 +4382,11 @@ form#patient-form button:hover {
 	z-index: 999;
 }
 
+.sidebar-title {
+    text-align: center;
+}
+
+
 .sidebar a {
 	background-color: #17a589;
 	display: block;
