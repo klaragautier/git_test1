@@ -4298,6 +4298,7 @@ form#patient-form button:hover {
 
 .sidebar-title {
     text-align: center;
+	color: #ffff;
 }
 
 
@@ -4311,6 +4312,7 @@ form#patient-form button:hover {
 	border-bottom: 1px solid #ddd;
 	transition: background-color 0.2s;
 }
+
 
 .sidebar a:hover {
 	background-color: #17a589;
@@ -4415,23 +4417,8 @@ select.form-control {
     padding-right: 35px;
 }
 
-/*=========================
-	End Paramètres
-===========================*/
-
-/*=========================
-	Start Preloader CSS
-===========================*/
 
 
-
-/*=========================
-	End Preloader CSS
-===========================*/
-
-/*=========================
-	End Paramètres
-===========================*/
 /*=========================
 	Start Cookies
 ===========================*/
@@ -4506,4 +4493,10 @@ select.form-control {
 
 /*=========================
 	End Cookies
+===========================*/
+
+
+
+/*=========================
+	End Paramètres
 ===========================*/
