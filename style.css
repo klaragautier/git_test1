@@ -4620,5 +4620,105 @@ select.form-control {
 ===========================*/
 
 /*=========================
+	Start Messagerie
+===========================*/
+
+/* ========== MESSAGERIE ========== */
+
+.messaging-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messages {
+  padding: 1rem;
+  height: 400px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: #e1f5fe;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.other {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.send-box {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.send-box input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.send-box button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: #3cb878;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3cb878;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  display: none;
+  z-index: 10000;
+  animation: fadein 0.3s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/*==========================
+	End Messagerie
+===========================*/
+
+
+
+/*=========================
 	End Paramètres
 ===========================*/
