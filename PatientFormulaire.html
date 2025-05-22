@@ -113,8 +113,16 @@
   <label>Prénom :</label>
   <input type="text" name="first_name" required>
 
-  <label>Âge :</label>
-  <input type="number" name="age" min="0" required>
+  <label>Date de naissance :</label>
+	<input type="date" name="date_naissance" max="9999-12-31" required>
+	<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dateInput = document.querySelector('input[name="date_naissance"]');
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.max = today;
+  });
+</script>
+
 
   <label>Genre :</label>
   <select name="gender" required>
@@ -160,29 +168,32 @@
     <option value="non">Non</option>
   </select>
 
-  <div id="zone_precise" style="display: none;">
-    <label>Choisissez jusqu'à 3 zones :</label>
+  <div id="zone_precis" style="display: none;">
+    <label>Choisissez une zone :</label>
     <select name="zones[]" multiple size="6">
-      <option value="dos">Dos</option>
-      <option value="épaule">Épaule</option>
-      <option value="genou">Genou</option>
-      <option value="cheville">Cheville</option>
-      <option value="cou">Cou</option>
-      <option value="autre">Autre</option>
+		<option value="">-- Choisissez --</option>
+		  <option value="dos">Dos</option>
+		  <option value="épaule">Épaule</option>
+		  <option value="genou">Genou</option>
+		  <option value="cheville">Cheville</option>
+		  <option value="cou">Cou</option>
+		  <option value="autre">Autre</option>
     </select>
   </div>
 
   <div id="zone_generale" style="display: none;">
     <label>Choisissez une zone générale :</label>
     <select name="zone_simple">
-      <option value="haut du corps">Haut du corps</option>
-      <option value="milieu du corps">Milieu du corps</option>
-      <option value="bas du corps">Bas du corps</option>
+		<option value="">-- Choisissez --</option>
+		  <option value="haut du corps">Haut du corps</option>
+		  <option value="milieu du corps">Milieu du corps</option>
+		  <option value="bas du corps">Bas du corps</option>
     </select>
   </div>
 
-  <label>Autres pathologies à signaler :</label>
+  <label>Avez vous une autre pathologie qui serait à noter pour le kiné (handicap, …):</label>
   <textarea name="autres_pathologies"></textarea>
+
 
   <label>Horaires préférés :</label>
   <input type="text" name="disponibilites" placeholder="ex: soirs en semaine, mercredi matin...">
