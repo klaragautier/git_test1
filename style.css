@@ -891,6 +891,11 @@ body{
 .Feautes .single-features p {
 	margin-top: 20px;
 }
+
+.bloc-bas {
+  margin-top: 4rem;
+}
+
 /*=============================
 	End Feautes CSS
 ===============================*/
