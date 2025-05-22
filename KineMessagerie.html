@@ -1,10 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+    <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="télékiné, rendez-vous, kiné, médecin, santé">
+		<meta name="description" content="Prise de RDV avec un kiné près de chez vous suivant sa spécialisation">
+		<meta name='copyright' content='Télékiné'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</body>
+		<!-- Title -->
+        <title> Télékiné - RDV en ligne</title>
+
+		<!-- Favicon -->
+        <link rel="icon" href="img/favicon.png">
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="css/datepicker.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+
+
+    </head>
+    <body>
+
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator">
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+		<!-- Bande supérieure du site (header) contenant logo, liens principaux et infos de contact -->
+		<header class="header">
+			
+			<!-- Barre supérieure avec logo, menu navigation et contacts -->
+			<div class="topbar">
+				<div class="container">
+
+					<!-- Mise en page avec flexbox : logo à gauche, menu au centre, contact à droite -->
+					<div class="d-flex align-items-center justify-content-end flex-wrap">
+						<ul class="top-contact d-flex mb-0 align-items-center">
+							<li class="me-3"><i class="fa fa-phone"></i>+33 6 37 79 38 67</li>
+							<li><i class="fa fa-envelope"></i><a href="mailto:support@telekine.fr"> support@telekine.fr</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<!-- Fin de la topbar -->
+		</header>
+		<!-- Fin de l’en-tête (header) -->
+
+
+		<!-- Sidebar latérale gauche -->
+		<div class="sidebar">
+			<!-- Logo dans la sidebar -->
+			<div class="sidebar-logo" style="text-align: center;">
+				<a href="index.html">
+					<img src="img2/LogoTeleKine.png" alt="TéléKiné Logo" style="height: 150px;">
+				</a>
+			</div>
+                <a href="KineAccueil.html">Accueil</a>
+                <a href="KineCalendrier.html">Calendrier</a>
+                <a href="KineMessagerie.html">Messagerie</a>
+                <a href="KineListePatients.html">Patients</a>
+                <a href="KineFormulaire.html">Profil</a>
+                <a href="KineParametres.html">Paramètres</a>
+                <a href="index.html" class="logout">Déconnexion</a>
+		</div>
+
+
+  <!-- Zone de messagerie -->
+  <div class="messaging-container">
+    <div class="messages" id="messages">
+      <div class="message user">Bonjour, vous avez besoin de rééducation ?</div>
+      <div class="message other">Oui, suite à une entorse à la cheville.</div>
+    </div>
+
+    <form class="send-box" id="message-form">
+      <input type="text" id="message-input" placeholder="Écrivez un message..." required>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification" class="notification"></div>
+
+
+
+
+  <!-- Scripts -->
+  <script>
+    const form = document.getElementById('message-form');
+    const input = document.getElementById('message-input');
+    const messagesBox = document.getElementById('messages');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (text) {
+        const msg = document.createElement('div');
+        msg.className = 'message user';
+        msg.textContent = text;
+        messagesBox.appendChild(msg);
+        messagesBox.scrollTop = messagesBox.scrollHeight;
+        input.value = '';
+      }
+    });
+
+    function showNotification(message, color = "#3cb878") {
+      const notif = document.getElementById("notification");
+      notif.textContent = message;
+      notif.style.backgroundColor = color;
+      notif.style.display = "block";
+
+      setTimeout(() => {
+        notif.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+    
+
+	<!-- Début de la zone pied de page -->
+	<footer id="footer" class="footer ">
+
+		<!-- Bloc principal du footer avec 4 colonnes -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<!-- Colonne 1 : présentation rapide et liens réseaux sociaux -->
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>À propos</h2>
+							<p>TéléKiné est une plateforme web de télé-rééducation qui permet aux patients de trouver un kinésithérapeute spécialisé près de chez eux et de suivre leur programme d'exercices à distance.</p>
+							<!-- Liens vers les réseaux sociaux -->
+							<ul class="social">
+								<li><a href="#"><i class="icofont-facebook"></i></a></li>
+								<li><a href="#"><i class="icofont-twitter"></i></a></li>
+								<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Colonne 2 : liens rapides (menu du site) -->
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer f-link">
+							<h2>Liens rapides</h2>
+							<div class="row">
+								<!-- Première colonne de liens -->
+								<div class="col-lg-6 col-md-6 col-12">
+									<ul>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Colonne 4 : newsletter -->
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>Newsletter</h2>
+							<p>Inscrivez-vous pour recevoir les dernières actualités par email.</p>
+							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+								<input name="email" placeholder="Adresse email" class="common-input" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Votre adresse email'" required="" type="email">
+								<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Fin du bloc principal du footer -->
+
+		<!-- Copyright et mentions légales -->
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="copyright-content text-center">
+							<p>© Copyright 2018 | Tous droits réservés par <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Fin des mentions légales -->
+
+	</footer>
+<!-- Fin de la zone pied de page -->
+
+		<!-- jquery Min JS -->
+        <script src="js/jquery.min.js"></script>
+		<!-- jquery Migrate JS -->
+		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<!-- jquery Ui JS -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Easing JS -->
+        <script src="js/easing.js"></script>
+		<!-- Color JS -->
+		<script src="js/colors.js"></script>
+		<!-- Popper JS -->
+		<script src="js/popper.min.js"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="js/bootstrap-datepicker.js"></script>
+		<!-- Jquery Nav JS -->
+        <script src="js/jquery.nav.js"></script>
+		<!-- Slicknav JS -->
+		<script src="js/slicknav.min.js"></script>
+		<!-- ScrollUp JS -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<!-- Niceselect JS -->
+		<script src="js/niceselect.js"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="js/tilt.jquery.min.js"></script>
+		<!-- Owl Carousel JS -->
+        <script src="js/owl-carousel.js"></script>
+		<!-- counterup JS -->
+		<script src="js/jquery.counterup.min.js"></script>
+		<!-- Steller JS -->
+		<script src="js/steller.js"></script>
+		<!-- Wow JS -->
+		<script src="js/wow.min.js"></script>
+		<!-- Magnific Popup JS -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Google Map API Key JS -->
+		<script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
+		<!-- Gmaps JS -->
+		<script src="js/gmaps.min.js"></script>
+		<!-- Map Active JS -->
+		<script src="js/map-active.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+
+    </body>
 </html>
