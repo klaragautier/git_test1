@@ -4242,6 +4242,7 @@ form#patient-form h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 600;
+  color: #17798A;
 }
 
 form#patient-form label {
@@ -4366,7 +4367,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 600;
-    color: #3cb878;
+    color: #17798A;
 }
 
 .form-group {
@@ -4392,7 +4393,7 @@ body {
 }
 
 .save-btn {
-    background-color: #3cb878;
+    background-color: #17798A;
     color: #fff;
     padding: 12px 30px;
     border: none;
@@ -4685,6 +4686,7 @@ select.form-control {
   overflow: hidden;
 }
 
+
 .messages {
   padding: 1rem;
   height: 400px;
@@ -4728,7 +4730,7 @@ background-color: rgba(23, 165, 137, 0.5);
 .send-box button {
   padding: 0.7rem 1.2rem;
   border: none;
-  background-color: #3cb878;
+  background-color: #17798a;
   color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -4736,7 +4738,7 @@ background-color: rgba(23, 165, 137, 0.5);
 }
 
 .send-box button:hover {
-  background-color: #0056b3;
+  background-color: #17798a;
 }
 
 /* Notification */
