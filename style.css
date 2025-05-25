@@ -120,9 +120,7 @@ body{
 	cursor: pointer;
 	box-shadow: -4px 0px 5px #00000036;
 }
-.get-pro:hover{
-	
-}
+
 #scrollUp {
 	bottom: 15px;
 	right: 15px;
@@ -801,9 +799,7 @@ body{
 .schedule .single-schedule a i{
 	margin-left:10px;
 }
-.schedule .single-schedule .time-sidual{
-	
-}
+
 .schedule .single-schedule .time-sidual{
 	overflow:hidden;
 	margin-top:17px;
@@ -825,6 +821,19 @@ body{
 	font-weight: 400;
 	float: right;
 }
+
+.single-schedule {
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.schedule-inner .row {
+    display: flex;
+}
+
 /*=============================
 	End Schedule CSS
 ===============================*/
@@ -2164,7 +2173,7 @@ body{
 	border-radius: 0 5px 5px 0;
 }
 .main-sidebar .search .button:hover {
-	background:#17798A;
+	background:#21B1C9;
 	color:#fff;
 }
 /* Category List */
@@ -2183,7 +2192,7 @@ body{
 	font-size:14px;
 }
 .main-sidebar .categor-list li a:hover{
-	color:#17798A;
+	color:#21B1C9;
 	padding-left:7px;
 }
 .main-sidebar .categor-list li a i {
@@ -2236,7 +2245,7 @@ body{
 	margin-top: 0;
 }
 .main-sidebar .single-post .content h5 a:hover{
-	color:#17798A;
+	color:#21B1C9;
 }
 .main-sidebar .single-post .content .comment li{
 	color:#888;
@@ -2273,7 +2282,7 @@ body{
 }
 .main-sidebar .side-tags .tag a:hover{
 	color:#fff;
-	background:#17798A;
+	background:#21B1C9;
 	border-color:transparent;
 }
 /* News Single */
@@ -2304,7 +2313,7 @@ body{
 	font-weight: 600;
 }
 .news-single .news-title a:hover {
-	color: #17798A;
+	color: #21B1C9;
 }
 /* Blog Meta */
 .news-single{
@@ -2457,7 +2466,7 @@ body{
 }
 .news-single .prev-next li a:hover{
 	color:#fff;
-	background:#17798A;
+	background:#21B1C9;
 	border-color:transparent;
 }
 /* Blog Comments */
@@ -2599,7 +2608,7 @@ body{
 	text-align:center;
 }
 .news-single .single-comments.login a:hover{
-	color:#353535;
+	color:#21B1C9;
 }
 .news-single .comments-form {
 	margin-top: 30px;
@@ -2905,7 +2914,7 @@ body{
 	color:#17798A;
 }
 .login .login-form p a:hover{
-	color:#2C2D3F;
+	color:#21B1C9;
 }
 .login .form {
 	margin-top: 30px;
@@ -2938,7 +2947,7 @@ body{
 	width:100%;
 }
 .login .form .btn:hover{
-	background:#17798A;
+	background:#21B1C9;
 	color:#fff;
 }
 .login .login-form .checkbox {
@@ -3002,7 +3011,7 @@ body{
 	font-weight:400;
 }
 .login .login-form .lost-pass:hover{
-	color:#17798A;
+	color:#21B1C9;
 }
 /*====================
    End Login CSS
@@ -3689,7 +3698,7 @@ body{
 }
 .doctor-calendar-table table tbody tr td:hover span.time {
   background-color: #ffffff;
-  color: #17798A;
+  color: #21B1C9;
 }
 .doctor-calendar-table table tbody tr:last-child td {
   border-bottom: none;
@@ -3855,7 +3864,7 @@ body{
 }
 .single-vision-box:hover .icon {
   background-color: #fff;
-  color: #17798A;
+  color: #21B1C9;
 }
 .single-vision-box:hover h3 {
   color: #ffffff;
@@ -4036,7 +4045,7 @@ body{
 }
 
 .footer ul li a:hover {
-    color: #17798A;
+    color: #21B1C9;
 }
 
 /* NEWSLETTER */
@@ -4164,11 +4173,11 @@ body{
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  color: #28a745;
+  color: #17798A;
 }
 
 .day-cell .add-btn:hover {
-  color: #1c7c31;
+  color: #21B1C9;
 }
 
 .day-cell .event {
@@ -4404,7 +4413,7 @@ body {
 }
 
 .save-btn:hover {
-    background-color: #36a36a;
+    background-color: #17798A;
 }
 
 .form-control textarea,
@@ -4586,7 +4595,7 @@ select.form-control {
 }
 
 .todo-section button:hover {
-    background-color: #3eb2a3;
+    background-color: #21B1C9;
 }
 
 /* Calendrier */
@@ -4620,6 +4629,7 @@ select.form-control {
     font-size: 12px;
 }
 
+/* Prochaines consultations */
 .next-patients {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -4664,6 +4674,42 @@ select.form-control {
     margin-left: 10px;
 }
 
+/*Barre de recherche kinésithérapeute*/
+.search-kine {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.search-kine h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.search-kine input[type="text"] {
+    padding: 10px;
+    width: 45%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-kine button {
+	margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #17798A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-kine button:hover {
+    background-color: #21B1C9;
+}
 
 
 /*==========================
@@ -4738,7 +4784,7 @@ background-color: rgba(23, 165, 137, 0.5);
 }
 
 .send-box button:hover {
-  background-color: #17798a;
+  background-color: #21B1C9;
 }
 
 /* Notification */
