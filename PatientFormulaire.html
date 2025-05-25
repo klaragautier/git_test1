@@ -131,6 +131,8 @@
     <option value="homme">Homme</option>
     <option value="autre">Autre</option>
   </select>
+  <br>
+  <br>
 
   <label>Email :</label>
   <input type="email" name="email" required>
@@ -150,16 +152,20 @@
     <option value="oui">Oui</option>
     <option value="non">Non</option>
   </select>
+  <br>
+  <br>
 
   <div id="ordonnance_block" style="display: none;">
     <label>Ordonnance (PDF, image) :</label>
     <input type="file" name="ordonnance" accept=".pdf,.jpg,.jpeg,.png">
   </div>
 
+
   <div id="motif_block" style="display: none;">
     <label>Raison de la consultation chez le kiné :</label>
     <textarea name="motif_kine"></textarea>
   </div>
+  <br>
 
   <label>Connaissez-vous la zone précise de la douleur ?</label>
   <select name="connait_zone" id="connait_zone" onchange="toggleZones()">
@@ -167,6 +173,8 @@
     <option value="oui">Oui</option>
     <option value="non">Non</option>
   </select>
+  <br>
+  <br>
 
   <div id="zone_precise" style="display: none;">
     <label>Choisissez une zone :</label>
@@ -191,6 +199,9 @@
     </select>
   </div>
 
+  <br>
+  <br>
+
   <label>Avez vous une autre pathologie qui serait à noter pour le kiné (handicap, …):</label>
   <textarea name="autres_pathologies"></textarea>
 
@@ -206,6 +217,8 @@
 		  <option value="oui">Oui</option>
 		  <option value="non">Non</option>
     </select>
+	<br>
+	<br>
 
 
   <label>Autres remarques :</label>
