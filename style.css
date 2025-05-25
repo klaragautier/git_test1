@@ -4814,6 +4814,61 @@ background-color: rgba(23, 165, 137, 0.5);
 	End Messagerie
 ===========================*/
 
+/*=========================
+	Start Contact Us
+===========================*/
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f4f9f9;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 30px;
+    color: #17798A;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.btn-send {
+    background-color: #17798A;
+    color: white;
+    border: none;
+}
+
+.btn-send:hover {
+    background-color: #21B1C9;
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #17798A;
+    color: white;
+    border-radius: 10px;
+}
+
+.contact-info h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+/*==========================
+	End Contact Us
+===========================*/
+
 
 
 /*=========================
