@@ -4748,9 +4748,10 @@ select.form-control {
 }
 
 .message.user {
-background-color: rgba(23, 165, 137, 0.5);
+background-color: #17798a;
   align-self: flex-end;
   text-align: right;
+  color: white;
 }
 
 .message.other {
