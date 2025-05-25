@@ -127,17 +127,23 @@
 							<input type="checkbox" onchange="toggleTask(this)">
 							<span>Regarder la vidéo sur l'épaule</span>
 						</li>
-												<li>
-							<input type="checkbox" onchange="toggleTask(this)">
-							<span>Trouver un rdv galant pour Klara</span>
-						</li>
 					</ul>
 					<input type="text" id="new-task" placeholder="Nouvelle tâche..." />
 					<button onclick="addTask()">Ajouter</button>
 				</div>
+				<!-- Barre de recherche Kiné -->
+				<div class="search-kine">
+					<h3>Rechercher un kiné</h3>
+					<form action="ResultatsRechercheKine.html" method="get">
+						<input type="text" name="specialite" placeholder="Spécialité (ex : dos, épaule...)" required>
+						<input type="text" name="localisation" placeholder="Localisation (ex : Paris, Lyon...)" required>
+						<button type="submit">Rechercher</button>
+					</form>
+				</div>
+
 			</div>
 
-			<!-- Colonne droite (vide pour l'instant) -->
+			<!-- Colonne droite -->
 			<div class="dashboard-right">
 				<!-- Aperçu du calendrier -->
 				<div class="calendar-preview" onclick="window.location.href='PatientCalendrier.html'">
